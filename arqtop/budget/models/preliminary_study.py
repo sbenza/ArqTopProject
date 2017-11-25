@@ -7,7 +7,7 @@ class PreliminaryStudy(models.Model):
     preliminary_study_desing = models.BooleanField(default=False, verbose_name=u'Desenhos EP: Plantas, Cortes e Elevação')
     external_perspectives = models.BooleanField(default=False, verbose_name=u'Perspectivas Externas')
     internal_perspectives = models.BooleanField(default=False, verbose_name=u'Perspectivas Internas')
-
+    project = models.ForeignKey('Project', blank=True, null=True)
 
 
     class Meta:

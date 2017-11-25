@@ -7,7 +7,7 @@ class DataEntry(models.Model):
     photographic_report = models.BooleanField(default=False, verbose_name=u'Relatório Fotográfico')
     textual_report = models.BooleanField(default=False,verbose_name=u'Relatório Textual')
     current_situation_blueprint = models.BooleanField(default=False, verbose_name=u'Desenho Técnico da Situação Atual do Local (Plantas e Cortes)')
-
+    project = models.ForeignKey('Project', blank=True, null=True)
     class Meta:
         abstract = False
         verbose_name_plural = "Levantamento de Dados"

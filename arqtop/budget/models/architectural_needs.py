@@ -5,7 +5,7 @@ from django.contrib import admin
 class ArchitecturalNeeds(models.Model):
     environment_relationship = models.BooleanField(default=False, verbose_name=u'Texto/Planilha da Relação de Ambientes')
     functional_organogram = models.BooleanField(default=False, verbose_name=u'Organograma Funcional')
-
+    project= models.ForeignKey('Project', blank=True, null=True)
 
 
     class Meta:

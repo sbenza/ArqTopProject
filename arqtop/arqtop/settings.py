@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'budget',
+    'constance',
+    'constance.backends.database'
 
 ]
 
@@ -93,6 +95,12 @@ DATABASES = {
     }
 }
 
+CONSTANCE_BACKEND = 'constance.backends.database.DatabaseBackend'
+
+CONSTANCE_CONFIG = {
+    'BUS_COST': (600.00, 'Value that becomes profitable to group trips and carry it out in a bus')
+}
+
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
@@ -131,3 +139,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# Using to serve the constance for the formula
+#change all example constance

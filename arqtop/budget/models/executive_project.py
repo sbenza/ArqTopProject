@@ -10,7 +10,7 @@ class ExecutiveProject(models.Model):
     coating_indication_plant = models.BooleanField(default=False, verbose_name=u'Planta de Indicação de Revestimento')
     structural_elements_plant = models.BooleanField(default=False, verbose_name=u'Planta de Elementos Estructurais')
     hidraulic_plant = models.BooleanField(default=False, verbose_name=u'Planta de Pontos Hidráulicos')
-
+    project = models.ForeignKey('Project', blank=True, null=True)
 
     class Meta:
         abstract = False
