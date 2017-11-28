@@ -79,7 +79,6 @@ class Migration(migrations.Migration):
             name='Project',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('date', models.DateTimeField(verbose_name='Data')),
                 ('project_type', models.CharField(choices=[('EXP', 'Expansão'), ('INR', 'Reforma Interna'), ('NCO', 'Nova Contrução')], default='INR', max_length=3, verbose_name='Tipo do Projeto')),
                 ('project_scale', models.CharField(choices=[('SML', 'Pequeno'), ('MED', 'Médio'), ('BIG', 'Grande')], default='MED', max_length=3, verbose_name='Escala do Projeto')),
                 ('project_complexity', models.CharField(choices=[('LOW', 'Baixa'), ('MED', 'Média'), ('HIG', 'Alta')], default='MED', max_length=3, verbose_name='Complexidade do Projeto')),
