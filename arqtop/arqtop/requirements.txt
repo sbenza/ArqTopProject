@@ -1,0 +1,7 @@
+django-constance==2.0.0
+django-picklefield==1.0.0
+dj-database-url
+python-dotenv
+Django==1.11.7
+psycopg2==2.7.3.1
+whitenoise
